@@ -1,0 +1,18 @@
+{
+  "kind": "arcgis-nova-deployable-app",
+  "version": "0.1",
+  "generatedAt": "2026-11-03T10:47:23.485Z",
+  "title": "Explorador de imágenes",
+  "authMode": "oauth",
+  "entry": "index.html",
+  "sourceAppPath": "outputs/apps/2026-11-03T10-47-23-dca09598-af77-4976-8714-445a76ed45ad/index.html",
+  "files": {
+    "app": "app.json",
+    "map": "map.json",
+    "runtime": "app.js",
+    "auth": "standalone-auth.js"
+  },
+  "portalUrl": "https://www.arcgis.com",
+  "appId": "Ii3gJR40LGGMGNn7",
+  "deploymentUrl": "https://alnafru.github.io/explorador-de-imagenes/"
+}

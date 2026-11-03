@@ -1,0 +1,90 @@
+{
+  "operationalLayers": [
+    {
+      "id": "1a1a1290758-layer-54",
+      "title": "Sentinel-2 · Level-2A",
+      "url": "https://sentinel.imagery1.arcgis.com/arcgis/rest/services/Sentinel2L2A/ImageServer",
+      "visibility": false,
+      "mosaicRule": {
+        "ascending": true,
+        "lockRasterIds": [
+          49769542
+        ],
+        "mosaicMethod": "esriMosaicLockRaster",
+        "mosaicOperation": "MT_FIRST"
+      },
+      "renderingRule": {
+        "rasterFunction": "Natural Color for Visualization"
+      },
+      "itemId": "255af1ceee844d6da8ef8440c8f90d00",
+      "layerType": "ArcGISImageServiceLayer",
+      "blendMode": "normal"
+    },
+    {
+      "id": "1a1a12933ab-layer-55",
+      "title": "Landsat · Level-2",
+      "url": "https://landsat.imagery1.arcgis.com/arcgis/rest/services/LandsatC2L2/ImageServer",
+      "visibility": false,
+      "mosaicRule": {
+        "ascending": true,
+        "lockRasterIds": [
+          10537758
+        ],
+        "mosaicMethod": "esriMosaicLockRaster",
+        "mosaicOperation": "MT_FIRST"
+      },
+      "renderingRule": {
+        "rasterFunction": "Natural Color for Visualization"
+      },
+      "itemId": "bd6b545b95654d91a0b7faf7b5e010f5",
+      "layerType": "ArcGISImageServiceLayer",
+      "blendMode": "normal"
+    }
+  ],
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "dark-gray-base-layer",
+        "opacity": 1,
+        "title": "Dark Gray Base",
+        "visibility": true,
+        "layerType": "VectorTileLayer",
+        "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/5e9b3685f4c24d8781073dd928ebda50/resources/styles/root.json"
+      },
+      {
+        "id": "dark-gray-reference-layer",
+        "opacity": 1,
+        "title": "Dark Gray Reference",
+        "visibility": true,
+        "layerType": "VectorTileLayer",
+        "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/747cb7a5329c478cbe6981076cc879c5/resources/styles/root.json",
+        "isReference": true
+      }
+    ],
+    "title": "Lona gris oscuro"
+  },
+  "authoringApp": "ArcGIS API for JavaScript",
+  "authoringAppVersion": "5.1",
+  "spatialReference": {
+    "latestWkid": 3857,
+    "wkid": 102100
+  },
+  "timeZone": "system",
+  "version": "2.37",
+  "initialState": {
+    "viewpoint": {
+      "targetGeometry": {
+        "spatialReference": {
+          "latestWkid": 3857,
+          "wkid": 102100
+        },
+        "xmin": -161546.39769575075,
+        "ymin": 4530852.6486468045,
+        "xmax": -84344.9991276954,
+        "ymax": 4598117.233537783
+      },
+      "scale": 288895.2771444917,
+      "rotation": 0
+    }
+  }
+}

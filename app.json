@@ -1,0 +1,130 @@
+{
+  "version": "0.3",
+  "kind": "app",
+  "generatedAt": "2026-11-03T10:47:23.490Z",
+  "item": {
+    "title": "Explorador de imágenes",
+    "subtitle": "Living Atlas · Imágenes disponibles en tu área"
+  },
+  "map": {
+    "type": "webmap",
+    "path": "./map.json"
+  },
+  "app": {
+    "template": "nova-app",
+    "preset": "map",
+    "showHeader": true,
+    "theme": {
+      "mode": "dark",
+      "accent": "default"
+    },
+    "layout": {
+      "left": {
+        "hidden": false,
+        "width": "380px",
+        "title": "Catálogo de imágenes",
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "customMount",
+            "id": "imagery-catalog"
+          }
+        ]
+      }
+    },
+    "widgets": [
+      {
+        "id": "home",
+        "type": "home",
+        "slot": "top-left",
+        "config": {}
+      },
+      {
+        "id": "scale",
+        "type": "scaleBar",
+        "slot": "bottom-left",
+        "config": {}
+      },
+      {
+        "id": "default-legend",
+        "type": "legend",
+        "slot": "bottom-left",
+        "config": {}
+      },
+      {
+        "id": "default-layer-list",
+        "type": "layerList",
+        "slot": "top-right",
+        "config": {}
+      },
+      {
+        "id": "default-basemap-gallery",
+        "type": "basemapGallery",
+        "slot": "top-right",
+        "config": {}
+      }
+    ],
+    "interactions": [],
+    "behaviors": [
+      {
+        "id": "imagery-explorer",
+        "label": "Catálogo por extensión y comparación temporal",
+        "bundlePath": "./runtime/behaviors/imagery-explorer-a84798f8be807875.js",
+        "sourceSha256": "a84798f8be807875e03161588dea578175722c6671401c014cff411b5d593776",
+        "modulePaths": [
+          "esri/core/reactiveUtils",
+          "esri/layers/WebTileLayer",
+          "esri/layers/support/MosaicRule",
+          "esri/layers/support/RasterFunction",
+          "esri/portal/Portal"
+        ],
+        "config": {
+          "sources": [
+            {
+              "id": "sentinel",
+              "title": "Sentinel-2 · Level-2A",
+              "layerId": "1a1a1290758-layer-54",
+              "note": "Óptico · 10–60 m · Archivo desde 2015"
+            },
+            {
+              "id": "landsat",
+              "title": "Landsat · Level-2",
+              "layerId": "1a1a12933ab-layer-55",
+              "note": "Óptico · 30 m · Archivo desde 1982"
+            },
+            {
+              "id": "wayback",
+              "title": "World Imagery · Wayback",
+              "note": "Ediciones del mapa base · Desde 2014"
+            }
+          ],
+          "waybackGroup": "0f3189e1d1414edfad860b697b7d8311",
+          "portalUrl": "https://www.arcgis.com"
+        },
+        "mounts": [
+          "imagery-catalog"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-11-03T11:33:48.084Z"
+      }
+    ]
+  },
+  "nova": {
+    "basename": "dca09598-af77-4976-8714-445a76ed45ad",
+    "presentationMode": "app",
+    "ownedGraphicsLayerIds": [],
+    "origin": {
+      "portalUrl": "https://www.arcgis.com",
+      "mapId": "output-9c155fc4-c1e1-4285-9b37-c7399ab79ab7",
+      "mapName": "New Conversation",
+      "viewMode": "2d",
+      "capturedAt": "2026-11-03T10:47:23.485Z"
+    },
+    "sourceSelection": {
+      "mode": "all"
+    },
+    "unsupportedLayers": [],
+    "degradedFeatures": []
+  }
+}
