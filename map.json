@@ -4,11 +4,11 @@
       "id": "1a1a1290758-layer-54",
       "title": "Sentinel-2 · Level-2A",
       "url": "https://sentinel.imagery1.arcgis.com/arcgis/rest/services/Sentinel2L2A/ImageServer",
-      "visibility": false,
+      "visibility": true,
       "mosaicRule": {
         "ascending": true,
         "lockRasterIds": [
-          49769542
+          50531591
         ],
         "mosaicMethod": "esriMosaicLockRaster",
         "mosaicOperation": "MT_FIRST"
@@ -25,14 +25,6 @@
       "title": "Landsat · Level-2",
       "url": "https://landsat.imagery1.arcgis.com/arcgis/rest/services/LandsatC2L2/ImageServer",
       "visibility": false,
-      "mosaicRule": {
-        "ascending": true,
-        "lockRasterIds": [
-          10537758
-        ],
-        "mosaicMethod": "esriMosaicLockRaster",
-        "mosaicOperation": "MT_FIRST"
-      },
       "renderingRule": {
         "rasterFunction": "Natural Color for Visualization"
       },

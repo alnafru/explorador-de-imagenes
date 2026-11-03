@@ -30,6 +30,18 @@
             "id": "imagery-catalog"
           }
         ]
+      },
+      "right": {
+        "hidden": false,
+        "width": "340px",
+        "title": "Plantillas ráster",
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "customMount",
+            "id": "imagery-functions"
+          }
+        ]
       }
     },
     "widgets": [
@@ -68,9 +80,9 @@
     "behaviors": [
       {
         "id": "imagery-explorer",
-        "label": "Catálogo por extensión y comparación temporal",
-        "bundlePath": "./runtime/behaviors/imagery-explorer-a84798f8be807875.js",
-        "sourceSha256": "a84798f8be807875e03161588dea578175722c6671401c014cff411b5d593776",
+        "label": "Catálogo por extensión, plantillas ráster y comparación temporal",
+        "bundlePath": "./runtime/behaviors/imagery-explorer-0ee809dc94b2f261.js",
+        "sourceSha256": "0ee809dc94b2f26185e299368a502200dcc7df5b0a0c813baef4e36c8bd855ce",
         "modulePaths": [
           "esri/core/reactiveUtils",
           "esri/layers/WebTileLayer",
@@ -102,11 +114,12 @@
           "portalUrl": "https://www.arcgis.com"
         },
         "mounts": [
-          "imagery-catalog"
+          "imagery-catalog",
+          "imagery-functions"
         ],
         "ownedLayerIds": [],
         "interactions": [],
-        "installedAt": "2026-11-03T11:33:48.084Z"
+        "installedAt": "2026-11-03T11:55:29.514Z"
       }
     ]
   },
