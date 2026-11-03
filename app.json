@@ -33,13 +33,21 @@
       },
       "right": {
         "hidden": false,
-        "width": "340px",
-        "title": "Plantillas ráster",
+        "width": "360px",
+        "title": "Exploración y análisis",
         "collapsed": false,
         "blocks": [
           {
             "type": "customMount",
+            "id": "geoai-assistant"
+          },
+          {
+            "type": "customMount",
             "id": "imagery-functions"
+          },
+          {
+            "type": "customMount",
+            "id": "temporal-comparison"
           }
         ]
       }
@@ -80,9 +88,9 @@
     "behaviors": [
       {
         "id": "imagery-explorer",
-        "label": "Catálogo por extensión, plantillas ráster y comparación temporal",
-        "bundlePath": "./runtime/behaviors/imagery-explorer-0ee809dc94b2f261.js",
-        "sourceSha256": "0ee809dc94b2f26185e299368a502200dcc7df5b0a0c813baef4e36c8bd855ce",
+        "label": "Catálogo de imágenes y asistente GeoAI contextual",
+        "bundlePath": "./runtime/behaviors/imagery-explorer-fc48a36531273a0d.js",
+        "sourceSha256": "fc48a36531273a0dd8306786679fbc17ce2eec29b5ae79342ddb29a3697440fb",
         "modulePaths": [
           "esri/core/reactiveUtils",
           "esri/layers/WebTileLayer",
@@ -115,11 +123,94 @@
         },
         "mounts": [
           "imagery-catalog",
-          "imagery-functions"
+          "imagery-functions",
+          "geoai-assistant"
         ],
         "ownedLayerIds": [],
         "interactions": [],
-        "installedAt": "2026-11-03T11:55:29.514Z"
+        "installedAt": "2026-11-03T12:24:48.036Z"
+      },
+      {
+        "id": "temporal-comparison",
+        "label": "Propuesta y confirmación de pares A/B con indicadores de metadatos",
+        "bundlePath": "./runtime/behaviors/temporal-comparison-4c40394701ce0503.js",
+        "sourceSha256": "4c40394701ce05034fd99d9a7870c69240c5ad2eea474188b3ec6f2104ec2810",
+        "modulePaths": [
+          "esri/core/reactiveUtils",
+          "esri/layers/support/MosaicRule"
+        ],
+        "config": {
+          "sources": [
+            {
+              "id": "sentinel",
+              "title": "Sentinel-2 · Level-2A",
+              "layerId": "1a1a1290758-layer-54",
+              "sensorField": "platform"
+            },
+            {
+              "id": "landsat",
+              "title": "Landsat · Level-2",
+              "layerId": "1a1a12933ab-layer-55",
+              "sensorField": "sensorname"
+            }
+          ]
+        },
+        "mounts": [
+          "temporal-comparison"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-11-03T12:52:52.988Z"
+      },
+      {
+        "id": "exploration-menu",
+        "label": "Tres accesos independientes: GeoAI, plantillas y comparación temporal",
+        "bundlePath": "./runtime/behaviors/exploration-menu-96038b14b685f553.js",
+        "sourceSha256": "96038b14b685f55396c5b7ebae30f6e2c883423ce3fc8d329b5c475eb951ac2c",
+        "modulePaths": [],
+        "config": {},
+        "mounts": [
+          "geoai-assistant",
+          "imagery-functions",
+          "temporal-comparison"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-11-03T12:56:01.253Z"
+      },
+      {
+        "id": "temporal-raster-change",
+        "label": "Área dibujable, cinco índices de cambio y serie temporal de anomalías",
+        "bundlePath": "./runtime/behaviors/temporal-raster-change-dadf62249b9aa048.js",
+        "sourceSha256": "dadf62249b9aa04844c3ce1408e645619a548c36bbe5ccc7c56610242b07c995",
+        "modulePaths": [
+          "esri/Graphic",
+          "esri/geometry/Point",
+          "esri/geometry/Polygon",
+          "esri/geometry/geometryEngine",
+          "esri/layers/GraphicsLayer",
+          "esri/layers/support/MosaicRule",
+          "esri/layers/support/RasterFunction",
+          "esri/widgets/Sketch/SketchViewModel"
+        ],
+        "config": {
+          "sources": [
+            {
+              "id": "sentinel",
+              "layerId": "1a1a1290758-layer-54"
+            },
+            {
+              "id": "landsat",
+              "layerId": "1a1a12933ab-layer-55"
+            }
+          ]
+        },
+        "mounts": [
+          "temporal-comparison"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-11-03T15:00:51.479Z"
       }
     ]
   },
